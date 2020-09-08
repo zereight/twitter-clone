@@ -1,16 +1,16 @@
 import * as firebase from "firebase/app";
-
+import * as config from "./env";
 const firebaseConfig = {
-  apiKey: "AIzaSyB1WaSAA-47-tG2UaWbq3rg2ftgHilcVT0",
-  authDomain: "twitter-clone-24e37.firebaseapp.com",
-  databaseURL: "https://twitter-clone-24e37.firebaseio.com",
-  projectId: "twitter-clone-24e37",
-  storageBucket: "twitter-clone-24e37.appspot.com",
-  messagingSenderId: "258462755345",
-  appId: "1:258462755345:web:4321b32ad6f20068de5fb0",
-  measurementId: "G-CPNSJYD17Z",
+  apiKey: config.REACT_APP_APIKEY,
+  authDomain: config.REACT_APP_AUTHDOMAIN,
+  databaseURL: config.REACT_APP_DATABASEURL,
+  projectId: config.REACT_APP_PROJECTID,
+  storageBucket: config.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: config.REACT_APP_MESSAGINGSENDERID,
+  appId: config.REACT_APP_MESSAGINGSENDERID,
+  measurementId: config.REACT_APP_MEASUREMENTID,
 };
-
+// console.log(firebaseConfig);
 // Initialize Firebase
-firebase.analytics();
+// firebase.analytics();
 export default firebase.initializeApp(firebaseConfig);
