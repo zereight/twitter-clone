@@ -1,5 +1,7 @@
 import * as firebase from "firebase/app";
+import "firebase/auth";
 import * as config from "./env";
+
 const firebaseConfig = {
   apiKey: config.REACT_APP_APIKEY,
   authDomain: config.REACT_APP_AUTHDOMAIN,
@@ -13,4 +15,6 @@ const firebaseConfig = {
 // console.log(firebaseConfig);
 // Initialize Firebase
 // firebase.analytics();
-export default firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+export const authService = firebase.auth();

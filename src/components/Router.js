@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Auth from "../routes/Auth";
 import Home from "../routes/Home";
+import PropTypes from "prop-types";
 
-export default () => {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-
+const AppRouter = ({ isLoggedIn }) => {
   return (
     <Router>
       <Switch>
@@ -24,3 +23,9 @@ export default () => {
     </Router>
   );
 };
+
+AppRouter.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+};
+
+export default AppRouter;
