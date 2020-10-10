@@ -1,3 +1,0 @@
-# Twitter Clone
-
-## React + firebase
