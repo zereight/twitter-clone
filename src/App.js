@@ -1,7 +1,7 @@
 import React from "react";
 
 function App() {
-  return <div></div>;
+  return <div>Nwitter</div>;
 }
 
 export default App;
